@@ -1,0 +1,17 @@
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 6px 6px 6px 18px; border-radius: 99px;
+  background: var(--ink); color: var(--white);
+  font-family: var(--sans); font-weight: 700; font-size: 12px; letter-spacing: 0.04em; text-transform: lowercase;
+  border: 0; cursor: pointer;
+}
+.btn i {
+  display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--white); color: var(--ink); font-style: normal; font-size: 12px;
+  transition: transform 0.25s;
+}
+.btn:hover i { transform: translateX(3px); }
+.btn.white { background: var(--white); color: var(--ink); }
+.btn.white i { background: var(--ink); color: var(--white); }
+.btn.yellow { background: var(--y); color: var(--ink); }
+.btn.yellow i { background: var(--ink); color: var(--y); }

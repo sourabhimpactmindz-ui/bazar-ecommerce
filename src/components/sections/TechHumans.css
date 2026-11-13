@@ -1,0 +1,17 @@
+.tech-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
+.tech-head h2 { font-size: clamp(30px, 4.2vw, 56px); max-width: 17ch; }
+.tech-mascot { width: clamp(90px, 11vw, 150px); flex: none; margin-bottom: -4px; }
+.tech-features {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 34px;
+  border-top: 1px solid #c9bf9c; padding-top: 34px; margin-top: 0; font-size: 16px;
+}
+.tech-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; margin-bottom: 14px; font-size: 17px; }
+.tech-features b { font-family: var(--sans); }
+
+@media (max-width: 820px) {
+  .tech-head { align-items: flex-start; }
+}
+@media (max-width: 560px) {
+  .tech-features { gap: 26px; }
+  .tech-mascot { width: 72px; }
+}

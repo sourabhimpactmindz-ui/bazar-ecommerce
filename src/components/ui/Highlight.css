@@ -1,0 +1,16 @@
+.hl {
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  background: linear-gradient(var(--y), var(--y)) 0 88% / 0 62% no-repeat;
+  transition: background-size 0.9s cubic-bezier(0.6, 0, 0.2, 1) 0.15s;
+  padding: 0 0.08em;
+}
+.hl.on { background-size: 100% 62%; }
+.hl.dark {
+  background: linear-gradient(var(--ink), var(--ink)) 0 50% / 0 100% no-repeat;
+  color: var(--y); padding: 0.04em 0.12em;
+}
+.hl.dark.on { background-size: 100% 100%; }
+@media (prefers-reduced-motion: reduce) {
+  .hl { background-size: 100% 62%; }
+  .hl.dark { background-size: 100% 100%; }
+}

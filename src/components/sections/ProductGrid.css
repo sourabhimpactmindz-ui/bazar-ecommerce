@@ -1,0 +1,9 @@
+.picks-title { margin-top: 130px; font-size: clamp(30px, 4vw, 52px); }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 34px; }
+
+@media (max-width: 820px) {
+  .picks-title { margin-top: 80px; }
+}
+@media (max-width: 560px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}

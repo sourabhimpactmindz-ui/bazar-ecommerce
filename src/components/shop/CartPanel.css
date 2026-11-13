@@ -1,0 +1,34 @@
+.cart-stage { background: var(--sand); border-radius: 28px; padding: 36px 36px 0; overflow: hidden; align-self: stretch; display: flex; flex-direction: column; }
+.cart-card {
+  background: var(--white); border-radius: 24px 24px 0 0; padding: 20px 20px 26px; font-family: var(--sans);
+  box-shadow: 0 18px 40px -22px rgba(22, 19, 12, 0.45); margin-top: auto; width: 100%; max-width: 420px; margin-left: auto; margin-right: auto;
+}
+.cart-who { display: flex; align-items: center; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--sand); font-weight: 700; font-size: 15px; }
+.cart-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--p); display: grid; place-items: center; font-weight: 800; }
+.cart-who small { display: block; color: var(--muted); font-size: 12px; font-weight: 500; }
+.cart-amount { margin-left: auto; text-align: right; font-weight: 800; font-size: 22px; }
+.cart-amount small { font-size: 11px; }
+.cart-group { font-size: 12px; font-weight: 700; color: var(--muted); margin: 14px 0 8px; }
+.cart-lines { list-style: none; padding: 0; margin: 0; }
+.cart-lines li {
+  display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 12px; background: var(--cream);
+  margin-bottom: 8px; font-size: 14px; font-weight: 700; opacity: 0;
+}
+.cart-name small { display: block; font-size: 11px; font-weight: 500; color: var(--muted); }
+.cart-lines em { margin-left: auto; font-style: normal; }
+.cart-tag { margin-left: auto; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 99px; background: var(--y); white-space: nowrap; }
+.cart-tag + em { margin-left: 0; }
+.cart-dot { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; font-size: 15px; flex: none; }
+
+.cart-card.on .cart-lines li { animation: cart-in 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.1) calc(var(--i) * 110ms) both; }
+@keyframes cart-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 560px) {
+  .cart-stage { padding: 18px 12px 0; border-radius: 22px; }
+  .cart-amount { font-size: 19px; }
+  .cart-tag { display: none; }
+  .cart-lines em { margin-left: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cart-lines li { opacity: 1; }
+}

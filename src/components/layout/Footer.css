@@ -1,0 +1,30 @@
+:root { --foot-h: clamp(420px, 72svh, 640px); }
+
+.foot-spacer { height: var(--foot-h); }
+.foot {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: -1; height: var(--foot-h);
+  background: var(--y); padding: 0 7vw calc(40px + env(safe-area-inset-bottom, 0px));
+  display: grid; grid-template-columns: 1fr minmax(0, 46%); gap: 40px; align-items: end;
+  font-family: var(--sans);
+}
+.foot-mascot { width: clamp(110px, 11vw, 170px); justify-self: start; }
+.foot-right { display: flex; flex-direction: column; }
+.foot-logo {
+  font-weight: 900; font-size: clamp(76px, 12vw, 190px); letter-spacing: -0.06em; line-height: 0.82;
+  margin-bottom: clamp(24px, 6svh, 60px);
+}
+.foot-legal { font-size: 15px; line-height: 1.4; max-width: 40em; margin-bottom: clamp(24px, 5svh, 48px); }
+.foot-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; font-size: 14px; }
+.foot-links a { border-bottom: 1px solid var(--ink); line-height: 1.2; }
+.foot-links span { margin-left: auto; }
+
+@media (max-width: 820px) {
+  .foot { grid-template-columns: 1fr; align-content: end; gap: 28px; }
+  .foot-mascot { width: 96px; }
+}
+@media (max-width: 560px) {
+  .foot { padding: 0 20px calc(28px + env(safe-area-inset-bottom, 0px)); }
+  .foot-logo { font-size: 24vw; }
+  .foot-legal, .foot-links { font-size: 13px; }
+  .foot-links span { margin-left: 0; flex-basis: 100%; }
+}
