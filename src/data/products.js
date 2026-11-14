@@ -1,11 +1,11 @@
-export const PRODUCTS = [
-  { id: 1, name: "Steel Bottle", desc: "750 ml, insulated", price: "₹699", emoji: "🧴", bg: "#cfe8ff" },
-  { id: 2, name: "Desk Lamp", desc: "Warm LED, dimmable", price: "₹1,299", emoji: "💡", bg: "#ffe9a8" },
-  { id: 3, name: "Cotton Tee", desc: "Unisex, relaxed fit", price: "₹549", emoji: "👕", bg: "#ffd0e2" },
-  { id: 4, name: "Sneakers", desc: "Everyday, cushioned", price: "₹2,499", emoji: "👟", bg: "#d9f5b5" },
-  { id: 5, name: "Earbuds", desc: "28 hr battery", price: "₹1,799", emoji: "🎧", bg: "#e2d6ff" },
-  { id: 6, name: "Backpack", desc: "20 L, water resistant", price: "₹1,599", emoji: "🎒", bg: "#ffd9b8" },
-];
+// export const PRODUCTS = [
+//   { id: 1, name: "Steel Bottle", desc: "750 ml, insulated", price: "₹699", emoji: "🧴", bg: "#cfe8ff" },
+//   { id: 2, name: "Desk Lamp", desc: "Warm LED, dimmable", price: "₹1,299", emoji: "💡", bg: "#ffe9a8" },
+//   { id: 3, name: "Cotton Tee", desc: "Unisex, relaxed fit", price: "₹549", emoji: "👕", bg: "#ffd0e2" },
+//   { id: 4, name: "Sneakers", desc: "Everyday, cushioned", price: "₹2,499", emoji: "👟", bg: "#d9f5b5" },
+//   { id: 5, name: "Earbuds", desc: "28 hr battery", price: "₹1,799", emoji: "🎧", bg: "#e2d6ff" },
+//   { id: 6, name: "Backpack", desc: "20 L, water resistant", price: "₹1,599", emoji: "🎒", bg: "#ffd9b8" },
+// ];
 
 // Static sample for the cart widget.
 export const CART = {

@@ -4,7 +4,30 @@
 .product small { color: var(--muted); font-family: var(--serif); font-size: 14px; }
 .product-row { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; font-weight: 800; }
 .product-add { border: 0; border-radius: 99px; background: var(--ink); color: #fff; width: 34px; height: 34px; font-size: 18px; cursor: pointer; }
-
+.product-thumb {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9e0c3;
+}
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.product-fallback {
+  font-family: "Archivo", "Arial Black", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  color: #1a1410;
+}
+.stock--in  { color: #2f7a1f; }
+.stock--out { color: #c4310f; }
+.product-add:disabled { opacity: 0.4; cursor: not-allowed; }
 @media (max-width: 560px) {
   .product { padding: 8px 8px 12px; border-radius: 16px; }
   .product-thumb { height: 110px; font-size: 44px; }

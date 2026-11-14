@@ -1,8 +1,12 @@
-import Home from "./pages/Home.jsx";
 import useSmoothScroll from "./hooks/useSmoothScroll.js";
+import { RouterProvider } from "react-router-dom";
+import router from "./route/router.jsx";
 
-// Routing goes here later (e.g. react-router). For now there is one page.
 export default function App() {
   useSmoothScroll();
-  return <Home />;
+  return (
+    <>
+    <RouterProvider router={router} />
+    </>
+  );
 }

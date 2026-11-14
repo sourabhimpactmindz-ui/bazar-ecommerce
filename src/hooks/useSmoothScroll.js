@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
-// Eased, slightly delayed scrolling for wheel / trackpad.
-// Touch devices keep native scrolling. Skipped when the user prefers reduced motion.
-// Tune the feel with `duration` (higher = more delay) in the options below.
 export default function useSmoothScroll() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;

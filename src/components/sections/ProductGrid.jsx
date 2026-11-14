@@ -1,16 +1,44 @@
+
 import ProductCard from "../shop/ProductCard.jsx";
-import { PRODUCTS } from "../../data/products.js";
 import "./ProductGrid.css";
+import { useGetProductsQuery } from "../../Api/productsApi.js";
 
 export default function ProductGrid() {
-  return (
-    <div>
-      <h2 className="picks-title">This week’s picks</h2>
-      <div className="product-grid">
-        {PRODUCTS.map((p) => (
-          <ProductCard key={p.id} product={p} />
-        ))}
-      </div>
-    </div>
-  );
+
+    const {
+        data: response,
+        isLoading,
+        isError
+    } = useGetProductsQuery();
+
+    const products = response?.Products || [];
+
+    if (isLoading) {
+        return <p>Loading products...</p>;
+    }
+
+    if (isError) {
+        return <p>Failed to load products.</p>;
+    }
+
+    return (
+        <div>
+            <h2 className="picks-title">This week's picks</h2>
+
+            <div className="product-grid">
+
+                {products.length > 0 ? (
+                    products.map((p) => (
+                        <ProductCard
+                            key={p._id}
+                            product={p}
+                        />
+                    ))
+                ) : (
+                    <p>Products Not Available</p>
+                )}
+
+            </div>
+        </div>
+    );
 }
